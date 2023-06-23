@@ -1,0 +1,35 @@
+<div class="container">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <mat-toolbar>
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
+            (click)="showtoast()">
+            <mat-icon>pets</mat-icon>
+        </button>
+        <span>SATTVA YOGA</span>
+        <span class="example-spacer"></span>
+        <nav mat-tab-nav-bar [tabPanel]="tabPanel" class="example-button-row">
+            <a mat-tab-link (click)="currentsection='Home'" [active]="currentsection == 'Home'"> Home </a>
+            <a mat-tab-link (click)="currentsection='About'" [active]="currentsection == 'About'"> About </a>
+            <a mat-tab-link (click)="currentsection='Classes'" [active]="currentsection == 'Classes'"> Classes </a>
+            <a mat-tab-link (click)="currentsection='Blog'" [active]="currentsection == 'Blog'"> Blog </a>
+            <a mat-tab-link (click)="currentsection='Contact'" [active]="currentsection == 'Contact'"> Contact </a>
+        </nav>
+        <mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>
+    </mat-toolbar>
+
+    <section class="homepage" *ngIf="currentsection=='Home'" id="sechome">
+        <app-home></app-home>
+    </section>
+    <section class="Aboutpage" *ngIf="currentsection=='About'" id="secabout">
+        <app-about></app-about>
+    </section>
+    <section class="Classespage" *ngIf="currentsection=='Classes'" id="secclasses">
+        <app-classes></app-classes>
+    </section>
+    <section class="Blogpage" *ngIf="currentsection=='Blog'" id="secblog">
+        <app-blogs></app-blogs>
+    </section>
+    <section class="Contactpage" *ngIf="currentsection=='Contact'" id="seccontact">
+        <app-contactus></app-contactus>
+    </section>
+</div>

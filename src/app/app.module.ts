@@ -9,11 +9,22 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { AboutComponent } from './components/about/about.component';
+import { ClassesComponent } from './components/classes/classes.component';
+import { BlogsComponent } from './components/blogs/blogs.component';
+import { ContactusComponent } from './components/contactus/contactus.component';
+import { MatTabsModule } from '@angular/material/tabs';
+import { NavbarmainComponent } from './components/navbarmain/navbarmain.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    AboutComponent,
+    ClassesComponent,
+    BlogsComponent,
+    ContactusComponent,
+    NavbarmainComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +33,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
