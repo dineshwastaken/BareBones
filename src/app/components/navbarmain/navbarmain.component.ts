@@ -9,7 +9,7 @@ import { CommonServiceService } from 'src/app/services/common-service.service';
 export class NavbarmainComponent {
   /* Component variables */
   pawClick = 0
-  currentsection = ''
+  currentsection = 'Home'
 
   constructor(
     private cms: CommonServiceService

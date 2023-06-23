@@ -11,7 +11,7 @@
             <a mat-tab-link (click)="currentsection='Home'" [active]="currentsection == 'Home'"> Home </a>
             <a mat-tab-link (click)="currentsection='About'" [active]="currentsection == 'About'"> About </a>
             <a mat-tab-link (click)="currentsection='Classes'" [active]="currentsection == 'Classes'"> Classes </a>
-            <a mat-tab-link (click)="currentsection='Blog'" [active]="currentsection == 'Blog'"> Blog </a>
+            <!-- <a mat-tab-link (click)="currentsection='Blog'" [active]="currentsection == 'Blog'"> Blog </a> -->
             <a mat-tab-link (click)="currentsection='Contact'" [active]="currentsection == 'Contact'"> Contact </a>
         </nav>
         <mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>
@@ -20,16 +20,16 @@
     <section class="homepage" *ngIf="currentsection=='Home'" id="sechome">
         <app-home></app-home>
     </section>
-    <section class="Aboutpage" *ngIf="currentsection=='About'" id="secabout">
+    <section class="Aboutpage homepage" *ngIf="currentsection=='About'" id="secabout">
         <app-about></app-about>
     </section>
-    <section class="Classespage" *ngIf="currentsection=='Classes'" id="secclasses">
+    <section class="Classespage homepage" *ngIf="currentsection=='Classes'" id="secclasses">
         <app-classes></app-classes>
     </section>
-    <section class="Blogpage" *ngIf="currentsection=='Blog'" id="secblog">
+    <section class="Blogpage homepage" *ngIf="currentsection=='Blog'" id="secblog">
         <app-blogs></app-blogs>
     </section>
-    <section class="Contactpage" *ngIf="currentsection=='Contact'" id="seccontact">
+    <section class="Contactpage homepage" *ngIf="currentsection=='Contact'" id="seccontact">
         <app-contactus></app-contactus>
     </section>
 </div>
